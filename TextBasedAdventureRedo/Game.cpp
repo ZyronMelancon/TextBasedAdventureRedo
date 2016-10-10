@@ -249,7 +249,7 @@ void action()
 		}
 		else if (key[0].name.strcomp(player.inv[input2-1].name) && currentRoom == 1)
 		{
-			printf("The chest opens! A little fairy flies out and\nimmediately tucks itself into my shirt's pocket. It\ndoesn't seem to want to come out...\n");
+			printf("The chest opens! A little fairy flies out and\nimmediately tucks itself into my shirt's pocket.\nIt seems too scared to come out...\n");
 			system("pause");
 			player.inv[input2-1] = fairy;
 		}
@@ -289,7 +289,7 @@ void action()
 		}
 		else if (glowOrb.name.strcomp(player.inv[input2 - 1].name) && currentRoom == 7)
 		{
-			printf("I place the glowing orb on the pedistal, and\nthe door behind it opens up on its own.\n I see light!\n");
+			printf("I place the glowing orb on the pedistal, and\nthe door behind it opens up on its own.\nI see light!\n");
 			system("pause");
 			room[8].locked = false;
 			orbplaced = true;
