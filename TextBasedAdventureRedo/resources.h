@@ -9,23 +9,34 @@ string dir[4] = {
 	dir[3] = "right"
 };
 
-string com[3] = {
-	com[0] = "attack",
-	com[1] = "item",
-	com[2] = "run"
+string com[5] = {
+	com[0] = "item",
+	com[1] = "attack",
+	com[2] = "talk",
+	com[3] = "pickup",
+	com[4] = "move"
 };
 
 
 //Room-specific dialogue
-string dial[9] = {
-	dial[0] = "It's a pretty empty room... I found a bottle here.\nMaybe it will be useful.",
+string dial[10] = {
+	dial[0] = "It's a pretty empty room... Maybe I should explore.",
 	dial[1] = "This room has the same emptiness as the first...\nBut there's a chest! Maybe if I have a key...",
-	dial[2] = "As I walk into this room, it seems I am not alone.\nThe being looks over at me with a hopeful gaze.",
-	dial[3] = "The room is full of light. In the center is seems\nto be a glowing orb. It radiates a peaceful\naura.",
-	dial[4] = "Immediately after entering the room, I feel my\nenergy being drained! I see two dark figures...\nI should probably get out before I can't move.",
+	dial[2] = "As I walk into this room, it seems I am not alone.\nThe winged being in the room looks over to me with a\nhopeful gaze. It seems as if it wants to speak.",
+	dial[3] = "The room is full of light. In the center seems\nto be a glowing orb. It radiates a peaceful\naura.",
+	dial[4] = "Immediately after entering the room, I feel my\nenergy being drained! I see random patches...\nI should probably get out before I can't move.",
 	dial[5] = "I step into a strange gelatinous substance...\nThe stuff is all over! Strangely, I feel as \nif I am healing. I wonder what this means.",
 	dial[6] = "This room is quite empty, but there are many\ndoors. The east-most door is rather large and\nhas a keyhole.",
-	dial[7] = "I see a pedistal in the center of the room. \nOn closer examination, it seems to have a slot\nfor the glowing orb I received earlier."
+	dial[7] = "I see a pedistal in the center of the room. \nOn closer examination, it seems to have a slot\nfor the glowing orb I received earlier.",
+	dial[8] = "The sylph and fairy seem happy to be together\nagain. They await my actions.",
+	dial[9] = "The dark forces have been defeated. The room\nis now peaceful and empty."
+};
+
+//Sprites
+string spr[5] = {
+	spr[0] = ".oOo.",
+	spr[1] = ".o.",
+	spr[2] = "0o.."
 };
 
 //Room data
@@ -69,16 +80,17 @@ Item key[3] = {
 	key[2] = { "Room Key", "O=v", 2 }
 };
 Item glowOrb = { "Glowing Orb", "o", 1, 40, false };
-Item gelPotion = { "Bottled Gel", "l", 0, 50, true };
-Item bottle = { "Bottle", "i", 5, 0, true };
+Item gelPotion = { "Bottled Gel", "l", 1, 50, true };
+Item bottle = { "Bottle", "i", 0, 0, true };
+Item fairy = { "Little Fairy", "+", 0, 0, true };
+Item blank = { "N/A", " ", 0, 0, false };
 
 
 //Player data
 struct Player
 {
 	int health;
-	Item inv1;
-	Item inv2;
+	Item inv[3];
 };
 
-Player player = { 100, bottle };
+Player player = { 100, blank, blank, blank };
