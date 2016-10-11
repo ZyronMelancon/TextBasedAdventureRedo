@@ -1,6 +1,18 @@
 #pragma once
 #include "string.h"
 
+//Checkpoints
+bool havechestkey = false;
+bool havesylphkey = false;
+bool havedoorkey = false;
+bool gavefairy = false;
+bool havebottle = false;
+bool defeated = false;
+bool gameover = false;
+bool win = false;
+bool haveorb = false;
+bool orbplaced = false;
+
 //Command data
 string dir[4] = {
 	dir[0] = "up",
@@ -84,7 +96,6 @@ Item gelPotion = { "Bottled Gel", "l", 1, 50, true };
 Item bottle = { "Bottle", "i", 0, 0, true };
 Item fairy = { "Little Fairy", "+", 0, 0, true };
 Item blank = { "N/A", " ", 0, 0, false };
-
 
 //Player data
 struct Player

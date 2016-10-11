@@ -110,6 +110,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="actions.h" />
     <ClInclude Include="resources.h" />
     <ClInclude Include="string.h" />
   </ItemGroup>
